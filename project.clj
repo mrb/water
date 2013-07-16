@@ -14,4 +14,10 @@
       :compiler {
         :output-to "main.js"
         :optimizations :whitespace
-        :pretty-print true}}]})
+        :pretty-print true}}
+              {
+      :id "water-adv"
+      :source-paths ["src/water"]
+      :compiler {
+        :output-to "main.js"
+        :optimizations :advanced}}]})
