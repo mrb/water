@@ -3633,47 +3633,28 @@ function zf(a, b) {
   });
   return new Af(b, Bf, m)
 };
-function Df(a, b) {
-  this.J = a;
-  this.Cb = b;
-  this.q = 0;
-  this.h = 2
-}
-Df.prototype.L = function() {
-  return this.J.length
-};
-Df.prototype.Wa = function() {
-  return pb.b(this.J.length, this.Cb)
-};
-Df.prototype.ib = function() {
-  return this.J.pop()
-};
-Df.prototype.hb = function(a, b) {
-  oa(a.Wa()) || e(Error([F("Assert failed: "), F("Can't add to a full buffer"), F("\n"), F(lf.j(R([Hb(new H(m, "not", "not", -1640422260, m), Hb(new H("impl", "full?", "impl/full?", -1337857039, m), new H(m, "this", "this", -1636972457, m)))], 0)))].join("")));
-  return this.J.unshift(b)
-};
-var Ef, Gf = function Ff(b) {
-  h === Ef && (Ef = {}, Ef = function(b, d, f) {
+var Df, Ff = function Ef(b) {
+  h === Df && (Df = {}, Df = function(b, d, f) {
     this.B = b;
     this.pb = d;
     this.Ab = f;
     this.q = 0;
     this.h = 425984
-  }, Ef.Xa = k, Ef.nb = "cljs.core.async.impl.channels/t5526", Ef.mb = function(b, d) {
+  }, Df.Xa = k, Df.nb = "cljs.core.async.impl.channels/t5526", Df.mb = function(b, d) {
     return E(d, "cljs.core.async.impl.channels/t5526")
-  }, Ef.prototype.Ga = p("B"), Ef.prototype.G = p("Ab"), Ef.prototype.H = function(b, d) {
-    return new Ef(this.B, this.pb, d)
+  }, Df.prototype.Ga = p("B"), Df.prototype.G = p("Ab"), Df.prototype.H = function(b, d) {
+    return new Df(this.B, this.pb, d)
   });
-  return new Ef(b, Ff, m)
+  return new Df(b, Ef, m)
 };
-function Hf(a, b, c, d) {
+function Gf(a, b, c, d) {
   this.fa = a;
   this.ma = b;
   this.J = c;
   this.closed = d
 }
-Hf.prototype.jb = function(a) {
-  If(a);
+Gf.prototype.jb = function(a) {
+  Hf(a);
   if(!w(Ka(this.closed))) {
     var a = this.closed, b = a.Eb;
     w(b) && !w(b.c ? b.c(k) : b.call(m, k)) && e(Error([F("Assert failed: "), F("Validator rejected reference state"), F("\n"), F(lf.j(R([Hb(new H(m, "validate", "validate", 1233162959, m), new H(m, "new-value", "new-value", 972165309, m))], 0)))].join("")));
@@ -3699,13 +3680,13 @@ Hf.prototype.jb = function(a) {
   }
   return m
 };
-Hf.prototype.kb = function(a, b) {
-  If(a);
+Gf.prototype.kb = function(a, b) {
+  Hf(a);
   var c;
   c = this.J;
   c = w(c) ? 0 < Vb(this.J) : c;
   if(w(c)) {
-    return c = vf(b), c = w(c) ? wf(b) : c, w(c) ? Gf(yf(this.J)) : m
+    return c = vf(b), c = w(c) ? wf(b) : c, w(c) ? Ff(yf(this.J)) : m
   }
   var d;
   a: {
@@ -3735,19 +3716,19 @@ Hf.prototype.kb = function(a, b) {
   f = T.e(d, 1, m);
   d = T.e(d, 2, m);
   if(w(w(f) ? c : f)) {
-    return setTimeout(f, 0), Gf(d)
+    return setTimeout(f, 0), Ff(d)
   }
   if(w(Ka(this.closed))) {
-    return c = vf(b), c = w(c) ? wf(b) : c, w(c) ? Gf(m) : m
+    return c = vf(b), c = w(c) ? wf(b) : c, w(c) ? Ff(m) : m
   }
   this.fa.unshift(b);
   return m
 };
-Hf.prototype.lb = function(a, b, c) {
+Gf.prototype.lb = function(a, b, c) {
   b == m && e(Error([F("Assert failed: "), F("Can't put nil in on a channel"), F("\n"), F(lf.j(R([Hb(new H(m, "not", "not", -1640422260, m), Hb(new H(m, "nil?", "nil?", -1637150201, m), new H(m, "val", "val", -1640415014, m)))], 0)))].join("")));
-  If(a);
+  Hf(a);
   if(w(Ka(this.closed))) {
-    return Gf(m)
+    return Ff(m)
   }
   a: {
     for(a = 0;;) {
@@ -3772,17 +3753,17 @@ Hf.prototype.lb = function(a, b, c) {
   if(w(w(d) ? g : d)) {
     return setTimeout(function() {
       return g.c ? g.c(b) : g.call(m, b)
-    }, 0), Gf(m)
+    }, 0), Ff(m)
   }
   a = this.J;
   a = w(a) ? oa(xf(this.J)) : a;
   if(w(a)) {
-    return a = vf(c), c = w(a) ? wf(c) : a, w(c) ? (zf(this.J, b), Gf(m)) : m
+    return a = vf(c), c = w(a) ? wf(c) : a, w(c) ? (zf(this.J, b), Ff(m)) : m
   }
   this.ma.unshift(de([c, b]));
   return m
 };
-function If(a) {
+function Hf(a) {
   for(var b = 0;;) {
     if(b < a.ma.length) {
       var c = a.ma[b], d = T.e(c, 0, m);
@@ -3800,11 +3781,11 @@ function If(a) {
     }
   }
 }
-;var Jf, Kf = m;
-function Lf() {
-  return Kf.c(0)
+;var If, Jf = m;
+function Kf() {
+  return Jf.c(0)
 }
-function Mf(a) {
+function Lf(a) {
   for(;;) {
     var b = 0.5 > Math.random();
     if(b ? 15 > a : b) {
@@ -3814,36 +3795,36 @@ function Mf(a) {
     }
   }
 }
-Kf = function(a) {
+Jf = function(a) {
   switch(arguments.length) {
     case 0:
-      return Lf.call(this);
+      return Kf.call(this);
     case 1:
-      return Mf.call(this, a)
+      return Lf.call(this, a)
   }
   e(Error("Invalid arity: " + arguments.length))
 };
-Kf.A = Lf;
-Kf.c = Mf;
-Jf = Kf;
-function Nf(a, b, c) {
+Jf.A = Kf;
+Jf.c = Lf;
+If = Jf;
+function Mf(a, b, c) {
   this.key = a;
   this.B = b;
   this.forward = c;
   this.q = 0;
   this.h = 2155872256
 }
-Nf.prototype.v = function(a, b, c) {
+Mf.prototype.v = function(a, b, c) {
   return Z(b, $, "[", " ", "]", c, a)
 };
-Nf.prototype.C = function() {
+Mf.prototype.C = function() {
   return Hb.j(R([this.key, this.B], 0))
 };
-var Of, Pf = m;
-function Qf(a) {
-  return Pf.e(m, m, a)
+var Nf, Of = m;
+function Pf(a) {
+  return Of.e(m, m, a)
 }
-function Rf(a, b, c) {
+function Qf(a, b, c) {
   for(var c = Array(c + 1), d = 0;;) {
     if(d < c.length) {
       c[d] = m, d += 1
@@ -3851,25 +3832,25 @@ function Rf(a, b, c) {
       break
     }
   }
-  return new Nf(a, b, c)
+  return new Mf(a, b, c)
 }
-Pf = function(a, b, c) {
+Of = function(a, b, c) {
   switch(arguments.length) {
     case 1:
-      return Qf.call(this, a);
+      return Pf.call(this, a);
     case 3:
-      return Rf.call(this, a, b, c)
+      return Qf.call(this, a, b, c)
   }
   e(Error("Invalid arity: " + arguments.length))
 };
-Pf.c = Qf;
-Pf.e = Rf;
-Of = Pf;
-var Sf, Tf = m;
-function Uf(a, b, c) {
-  return Tf.m(a, b, c, m)
+Of.c = Pf;
+Of.e = Qf;
+Nf = Of;
+var Rf, Sf = m;
+function Tf(a, b, c) {
+  return Sf.m(a, b, c, m)
 }
-function Vf(a, b, c, d) {
+function Uf(a, b, c, d) {
   for(;;) {
     if(0 > c) {
       return a
@@ -3893,30 +3874,30 @@ function Vf(a, b, c, d) {
     c -= 1
   }
 }
-Tf = function(a, b, c, d) {
+Sf = function(a, b, c, d) {
   switch(arguments.length) {
     case 3:
-      return Uf.call(this, a, b, c);
+      return Tf.call(this, a, b, c);
     case 4:
-      return Vf.call(this, a, b, c, d)
+      return Uf.call(this, a, b, c, d)
   }
   e(Error("Invalid arity: " + arguments.length))
 };
-Tf.e = Uf;
-Tf.m = Vf;
-Sf = Tf;
-function Wf(a, b) {
+Sf.e = Tf;
+Sf.m = Uf;
+Rf = Sf;
+function Vf(a, b) {
   this.ia = a;
   this.R = b;
   this.q = 0;
   this.h = 2155872256
 }
-Wf.prototype.v = function(a, b, c) {
+Vf.prototype.v = function(a, b, c) {
   return Z(b, function(a) {
     return Z(b, $, "", " ", "", c, a)
   }, "{", ", ", "}", c, a)
 };
-Wf.prototype.C = function() {
+Vf.prototype.C = function() {
   var a = function c(a) {
     return new bd(m, n, function() {
       return a == m ? m : S(de([a.key, a.B]), c(a.forward[0]))
@@ -3924,12 +3905,12 @@ Wf.prototype.C = function() {
   };
   return a.c ? a.c(this.ia.forward[0]) : a.call(m, this.ia.forward[0])
 };
-Wf.prototype.put = function(a, b) {
-  var c = Array(15), d = Sf.m(this.ia, a, this.R, c).forward[0], f = d != m;
+Vf.prototype.put = function(a, b) {
+  var c = Array(15), d = Rf.m(this.ia, a, this.R, c).forward[0], f = d != m;
   if(f ? d.key === a : f) {
     return d.B = b
   }
-  d = Jf.A();
+  d = If.A();
   if(d > this.R) {
     for(f = this.R + 1;;) {
       if(f <= d + 1) {
@@ -3940,12 +3921,12 @@ Wf.prototype.put = function(a, b) {
     }
     this.R = d
   }
-  for(d = Of.e(a, b, Array(d));;) {
+  for(d = Nf.e(a, b, Array(d));;) {
     return 0 <= this.R ? (c = c[0].forward, d.forward[0] = c[0], c[0] = d) : m
   }
 };
-Wf.prototype.remove = function(a) {
-  var b = Array(15), c = Sf.m(this.ia, a, this.R, b).forward[0], d = c != m;
+Vf.prototype.remove = function(a) {
+  var b = Array(15), c = Rf.m(this.ia, a, this.R, b).forward[0], d = c != m;
   if(d ? c.key === a : d) {
     for(a = 0;;) {
       if(a <= this.R) {
@@ -3965,13 +3946,32 @@ Wf.prototype.remove = function(a) {
     return m
   }
 };
-var Xf = new Wf(Of.c(0), 0);
+var Wf = new Vf(Nf.c(0), 0);
+function Xf(a, b) {
+  this.J = a;
+  this.Cb = b;
+  this.q = 0;
+  this.h = 2
+}
+Xf.prototype.L = function() {
+  return this.J.length
+};
+Xf.prototype.Wa = function() {
+  return pb.b(this.J.length, this.Cb)
+};
+Xf.prototype.ib = function() {
+  return this.J.pop()
+};
+Xf.prototype.hb = function(a, b) {
+  oa(a.Wa()) || e(Error([F("Assert failed: "), F("Can't add to a full buffer"), F("\n"), F(lf.j(R([Hb(new H(m, "not", "not", -1640422260, m), Hb(new H("impl", "full?", "impl/full?", -1337857039, m), new H(m, "this", "this", -1636972457, m)))], 0)))].join("")));
+  return this.J.unshift(b)
+};
 var Yf, Zf = m;
 function $f() {
   return Zf.c(m)
 }
 function ag(a) {
-  return new Hf([], [], "number" === typeof a ? new Df([], a) : a, nf.c(m))
+  return new Gf([], [], "number" === typeof a ? new Xf([], a) : a, nf.c(m))
 }
 Zf = function(a) {
   switch(arguments.length) {
@@ -3985,8 +3985,8 @@ Zf = function(a) {
 Zf.A = $f;
 Zf.c = ag;
 Yf = Zf;
-for(var bg = document.getElementById("w").getContext("2d"), cg = bg.createImageData(320, 240), dg = cg.data, eg = 0;;) {
-  if(76800 > eg) {
+for(var bg = document.getElementById("w").getContext("2d"), cg = bg.createImageData(640, 480), dg = cg.data, eg = 0;;) {
+  if(307200 > eg) {
     var fg = 4 * eg;
     dg[fg + 0] = 255 * Math.random() | 0;
     dg[fg + 1] = 255 * Math.random() | 0;
@@ -4011,10 +4011,10 @@ setTimeout(function() {
           var c;
           var d = (new Date).valueOf() + 10;
           b: {
-            b = Xf.ia;
-            for(c = Xf.R;;) {
+            b = Wf.ia;
+            for(c = Wf.R;;) {
               if(0 > c) {
-                b = b === Xf.ia ? m : b;
+                b = b === Wf.ia ? m : b;
                 break b
               }
               var g;
@@ -4039,10 +4039,10 @@ setTimeout(function() {
           if(w(b)) {
             c = b
           }else {
-            var u = new Hf([], [], m, nf.c(m));
-            Xf.put(d, u);
+            var u = new Gf([], [], m, nf.c(m));
+            Wf.put(d, u);
             setTimeout(function() {
-              Xf.remove(d);
+              Wf.remove(d);
               return uf(u)
             }, 10);
             c = u
@@ -4063,15 +4063,15 @@ setTimeout(function() {
           b = a[2];
           g = document.getElementById("w").getContext("2d");
           c = document.getElementById("w").getContext("2d");
-          g = g.getImageData(0, 0, 320, 240);
+          g = g.getImageData(0, 0, 640, 480);
           var z = g.data, x = new ArrayBuffer(z.length), G = new Uint8ClampedArray(x), x = new Uint32Array(x);
           G.set(z);
           for(var I = 0;;) {
-            if(238 > I) {
+            if(478 > I) {
               for(var L = 0;;) {
-                if(318 > L) {
-                  var M = L + 1, P = I + 1, W = M + 1, fa = M - 1, Wa = P + 1, db = P - 1, Kd = x[320 * db + fa], Ld = x[320 * db + M], db = x[320 * db + W], Md = x[320 * P + fa], Nd = x[320 * P + M], Od = x[320 * P + W], fa = x[320 * Wa + fa], Pd = x[320 * Wa + M], W = x[320 * Wa + W];
-                  x[M + 320 * P] = -16777216 | ((Kd >> 16 & 255) + (Ld >> 16 & 255) + (db >> 16 & 255) + (Md >> 16 & 255) + (Nd >> 16 & 255) + (Od >> 16 & 255) + (fa >> 16 & 255) + (Pd >> 16 & 255) + (W >> 16 & 255)) / 9 << 16 | ((Kd >> 8 & 255) + (Ld >> 8 & 255) + (db >> 8 & 255) + (Md >> 8 & 255) + (Nd >> 8 & 255) + (Od >> 8 & 255) + (fa >> 8 & 255) + (Pd >> 8 & 255) + (W >> 8 & 255)) / 9 << 8 | ((Kd & 255) + (Ld & 255) + (db & 255) + (Md & 255) + (Nd & 255) + (Od & 255) + (fa & 255) + (Pd & 255) + 
+                if(638 > L) {
+                  var M = L + 1, P = I + 1, W = M + 1, fa = M - 1, Wa = P + 1, db = P - 1, Kd = x[640 * db + fa], Ld = x[640 * db + M], db = x[640 * db + W], Md = x[640 * P + fa], Nd = x[640 * P + M], Od = x[640 * P + W], fa = x[640 * Wa + fa], Pd = x[640 * Wa + M], W = x[640 * Wa + W];
+                  x[M + 640 * P] = -16777216 | ((Kd >> 16 & 255) + (Ld >> 16 & 255) + (db >> 16 & 255) + (Md >> 16 & 255) + (Nd >> 16 & 255) + (Od >> 16 & 255) + (fa >> 16 & 255) + (Pd >> 16 & 255) + (W >> 16 & 255)) / 9 << 16 | ((Kd >> 8 & 255) + (Ld >> 8 & 255) + (db >> 8 & 255) + (Md >> 8 & 255) + (Nd >> 8 & 255) + (Od >> 8 & 255) + (fa >> 8 & 255) + (Pd >> 8 & 255) + (W >> 8 & 255)) / 9 << 8 | ((Kd & 255) + (Ld & 255) + (db & 255) + (Md & 255) + (Nd & 255) + (Od & 255) + (fa & 255) + (Pd & 255) + 
                   (W & 255)) / 9;
                   L += 1
                 }else {
