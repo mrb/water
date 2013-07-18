@@ -23910,17 +23910,17 @@ water.core.make_noise = function make_noise(w, h, canvas_element) {
   var context = canvas.getContext("2d");
   var data = context.createImageData(w, h);
   var pixel_data = data.data;
-  var n__3078__auto___52665 = w * h;
-  var n_52666 = 0;
+  var n__3078__auto___53069 = w * h;
+  var n_53070 = 0;
   while(true) {
-    if(n_52666 < n__3078__auto___52665) {
-      var cursor_52667 = 4 * n_52666;
-      pixel_data[cursor_52667 + 0] = water.core.rand_int.call(null, 255);
-      pixel_data[cursor_52667 + 1] = water.core.rand_int.call(null, 255);
-      pixel_data[cursor_52667 + 2] = water.core.rand_int.call(null, 255);
-      pixel_data[cursor_52667 + 3] = 255;
-      var G__52668 = n_52666 + 1;
-      n_52666 = G__52668;
+    if(n_53070 < n__3078__auto___53069) {
+      var cursor_53071 = 4 * n_53070;
+      pixel_data[cursor_53071 + 0] = water.core.rand_int.call(null, 255);
+      pixel_data[cursor_53071 + 1] = water.core.rand_int.call(null, 255);
+      pixel_data[cursor_53071 + 2] = water.core.rand_int.call(null, 255);
+      pixel_data[cursor_53071 + 3] = 255;
+      var G__53072 = n_53070 + 1;
+      n_53070 = G__53072;
       continue
     }else {
     }
@@ -23957,66 +23957,66 @@ water.core.blur = function blur(w, h, from, canvas_element) {
   var buf8 = new Uint8ClampedArray(buffer);
   var buf32 = new Uint32Array(buffer);
   buf8.set(pixel_data);
-  var n__3078__auto___52669 = h - 2;
-  var iy_52670 = 0;
+  var n__3078__auto___53073 = h - 2;
+  var iy_53074 = 0;
   while(true) {
-    if(iy_52670 < n__3078__auto___52669) {
-      var n__3078__auto___52671__$1 = w - 2;
-      var ix_52672 = 0;
+    if(iy_53074 < n__3078__auto___53073) {
+      var n__3078__auto___53075__$1 = w - 2;
+      var ix_53076 = 0;
       while(true) {
-        if(ix_52672 < n__3078__auto___52671__$1) {
-          var x_52673 = ix_52672 + 1;
-          var y_52674 = iy_52670 + 1;
-          var xi_52675 = x_52673 + 1;
-          var xd_52676 = x_52673 - 1;
-          var yi_52677 = y_52674 + 1;
-          var yd_52678 = y_52674 - 1;
-          var xdyd_52679 = water.core.get_pixel.call(null, xd_52676, yd_52678, w, buf32);
-          var xyd_52680 = water.core.get_pixel.call(null, x_52673, yd_52678, w, buf32);
-          var xiyd_52681 = water.core.get_pixel.call(null, xi_52675, yd_52678, w, buf32);
-          var xdy_52682 = water.core.get_pixel.call(null, xd_52676, y_52674, w, buf32);
-          var xy_52683 = water.core.get_pixel.call(null, x_52673, y_52674, w, buf32);
-          var xiy_52684 = water.core.get_pixel.call(null, xi_52675, y_52674, w, buf32);
-          var xdyi_52685 = water.core.get_pixel.call(null, xd_52676, yi_52677, w, buf32);
-          var xyi_52686 = water.core.get_pixel.call(null, x_52673, yi_52677, w, buf32);
-          var xiyi_52687 = water.core.get_pixel.call(null, xi_52675, yi_52677, w, buf32);
-          var rxdyd_52688 = water.core.red.call(null, xdyd_52679);
-          var gxdyd_52689 = water.core.green.call(null, xdyd_52679);
-          var bxdyd_52690 = water.core.blue.call(null, xdyd_52679);
-          var rxyd_52691 = water.core.red.call(null, xyd_52680);
-          var gxyd_52692 = water.core.green.call(null, xyd_52680);
-          var bxyd_52693 = water.core.blue.call(null, xyd_52680);
-          var rxiyd_52694 = water.core.red.call(null, xiyd_52681);
-          var gxiyd_52695 = water.core.green.call(null, xiyd_52681);
-          var bxiyd_52696 = water.core.blue.call(null, xiyd_52681);
-          var rxdy_52697 = water.core.red.call(null, xdy_52682);
-          var gxdy_52698 = water.core.green.call(null, xdy_52682);
-          var bxdy_52699 = water.core.blue.call(null, xdy_52682);
-          var rxy_52700 = water.core.red.call(null, xy_52683);
-          var gxy_52701 = water.core.green.call(null, xy_52683);
-          var bxy_52702 = water.core.blue.call(null, xy_52683);
-          var rxiy_52703 = water.core.red.call(null, xiy_52684);
-          var gxiy_52704 = water.core.green.call(null, xiy_52684);
-          var bxiy_52705 = water.core.blue.call(null, xiy_52684);
-          var rxdyi_52706 = water.core.red.call(null, xdyi_52685);
-          var gxdyi_52707 = water.core.green.call(null, xdyi_52685);
-          var bxdyi_52708 = water.core.blue.call(null, xdyi_52685);
-          var rxyi_52709 = water.core.red.call(null, xyi_52686);
-          var gxyi_52710 = water.core.green.call(null, xyi_52686);
-          var bxyi_52711 = water.core.blue.call(null, xyi_52686);
-          var rxiyi_52712 = water.core.red.call(null, xiyi_52687);
-          var gxiyi_52713 = water.core.green.call(null, xiyi_52687);
-          var bxiyi_52714 = water.core.blue.call(null, xiyi_52687);
-          buf32[x_52673 + w * y_52674] = water.core.pack_rgba.call(null, (rxdyd_52688 + rxyd_52691 + rxiyd_52694 + rxdy_52697 + rxy_52700 + rxiy_52703 + rxdyi_52706 + rxyi_52709 + rxiyi_52712) / 9, (gxdyd_52689 + gxyd_52692 + gxiyd_52695 + gxdy_52698 + gxy_52701 + gxiy_52704 + gxdyi_52707 + gxyi_52710 + gxiyi_52713) / 9, (bxdyd_52690 + bxyd_52693 + bxiyd_52696 + bxdy_52699 + bxy_52702 + bxiy_52705 + bxdyi_52708 + bxyi_52711 + bxiyi_52714) / 9, 255);
-          var G__52715 = ix_52672 + 1;
-          ix_52672 = G__52715;
+        if(ix_53076 < n__3078__auto___53075__$1) {
+          var x_53077 = ix_53076 + 1;
+          var y_53078 = iy_53074 + 1;
+          var xi_53079 = x_53077 + 1;
+          var xd_53080 = x_53077 - 1;
+          var yi_53081 = y_53078 + 1;
+          var yd_53082 = y_53078 - 1;
+          var xdyd_53083 = water.core.get_pixel.call(null, xd_53080, yd_53082, w, buf32);
+          var xyd_53084 = water.core.get_pixel.call(null, x_53077, yd_53082, w, buf32);
+          var xiyd_53085 = water.core.get_pixel.call(null, xi_53079, yd_53082, w, buf32);
+          var xdy_53086 = water.core.get_pixel.call(null, xd_53080, y_53078, w, buf32);
+          var xy_53087 = water.core.get_pixel.call(null, x_53077, y_53078, w, buf32);
+          var xiy_53088 = water.core.get_pixel.call(null, xi_53079, y_53078, w, buf32);
+          var xdyi_53089 = water.core.get_pixel.call(null, xd_53080, yi_53081, w, buf32);
+          var xyi_53090 = water.core.get_pixel.call(null, x_53077, yi_53081, w, buf32);
+          var xiyi_53091 = water.core.get_pixel.call(null, xi_53079, yi_53081, w, buf32);
+          var rxdyd_53092 = water.core.red.call(null, xdyd_53083);
+          var gxdyd_53093 = water.core.green.call(null, xdyd_53083);
+          var bxdyd_53094 = water.core.blue.call(null, xdyd_53083);
+          var rxyd_53095 = water.core.red.call(null, xyd_53084);
+          var gxyd_53096 = water.core.green.call(null, xyd_53084);
+          var bxyd_53097 = water.core.blue.call(null, xyd_53084);
+          var rxiyd_53098 = water.core.red.call(null, xiyd_53085);
+          var gxiyd_53099 = water.core.green.call(null, xiyd_53085);
+          var bxiyd_53100 = water.core.blue.call(null, xiyd_53085);
+          var rxdy_53101 = water.core.red.call(null, xdy_53086);
+          var gxdy_53102 = water.core.green.call(null, xdy_53086);
+          var bxdy_53103 = water.core.blue.call(null, xdy_53086);
+          var rxy_53104 = water.core.red.call(null, xy_53087);
+          var gxy_53105 = water.core.green.call(null, xy_53087);
+          var bxy_53106 = water.core.blue.call(null, xy_53087);
+          var rxiy_53107 = water.core.red.call(null, xiy_53088);
+          var gxiy_53108 = water.core.green.call(null, xiy_53088);
+          var bxiy_53109 = water.core.blue.call(null, xiy_53088);
+          var rxdyi_53110 = water.core.red.call(null, xdyi_53089);
+          var gxdyi_53111 = water.core.green.call(null, xdyi_53089);
+          var bxdyi_53112 = water.core.blue.call(null, xdyi_53089);
+          var rxyi_53113 = water.core.red.call(null, xyi_53090);
+          var gxyi_53114 = water.core.green.call(null, xyi_53090);
+          var bxyi_53115 = water.core.blue.call(null, xyi_53090);
+          var rxiyi_53116 = water.core.red.call(null, xiyi_53091);
+          var gxiyi_53117 = water.core.green.call(null, xiyi_53091);
+          var bxiyi_53118 = water.core.blue.call(null, xiyi_53091);
+          buf32[x_53077 + w * y_53078] = water.core.pack_rgba.call(null, (rxdyd_53092 + rxyd_53095 + rxiyd_53098 + rxdy_53101 + rxy_53104 + rxiy_53107 + rxdyi_53110 + rxyi_53113 + rxiyi_53116) / 9, (gxdyd_53093 + gxyd_53096 + gxiyd_53099 + gxdy_53102 + gxy_53105 + gxiy_53108 + gxdyi_53111 + gxyi_53114 + gxiyi_53117) / 9, (bxdyd_53094 + bxyd_53097 + bxiyd_53100 + bxdy_53103 + bxy_53106 + bxiy_53109 + bxdyi_53112 + bxyi_53115 + bxiyi_53118) / 9, 255);
+          var G__53119 = ix_53076 + 1;
+          ix_53076 = G__53119;
           continue
         }else {
         }
         break
       }
-      var G__52716 = iy_52670 + 1;
-      iy_52670 = G__52716;
+      var G__53120 = iy_53074 + 1;
+      iy_53074 = G__53120;
       continue
     }else {
     }
@@ -24028,53 +24028,53 @@ water.core.blur = function blur(w, h, from, canvas_element) {
 water.core.W = 320;
 water.core.H = 240;
 water.core.make_noise.call(null, water.core.W, water.core.H, "w");
-var c__4506__auto___52737 = cljs.core.async.chan.call(null, 1);
+var c__4506__auto___53141 = cljs.core.async.chan.call(null, 1);
 cljs.core.async.impl.dispatch.run.call(null, function() {
   var f__4507__auto__ = function() {
     var state_machine__4433__auto__ = null;
     var state_machine__4433__auto____0 = function() {
-      var statearr_52731 = new Array(7);
-      statearr_52731[0] = state_machine__4433__auto__;
-      statearr_52731[1] = 1;
-      return statearr_52731
+      var statearr_53135 = new Array(7);
+      statearr_53135[0] = state_machine__4433__auto__;
+      statearr_53135[1] = 1;
+      return statearr_53135
     };
-    var state_machine__4433__auto____1 = function(state_52725) {
+    var state_machine__4433__auto____1 = function(state_53129) {
       while(true) {
         var result__4434__auto__ = function() {
-          var G__52732 = state_52725[1] | 0;
-          if(cljs.core._EQ_.call(null, 1, G__52732)) {
-            var state_52725__$1 = state_52725;
-            var statearr_52733_52738 = state_52725__$1;
-            statearr_52733_52738[2] = null;
-            statearr_52733_52738[1] = 2;
+          var G__53136 = state_53129[1] | 0;
+          if(cljs.core._EQ_.call(null, 1, G__53136)) {
+            var state_53129__$1 = state_53129;
+            var statearr_53137_53142 = state_53129__$1;
+            statearr_53137_53142[2] = null;
+            statearr_53137_53142[1] = 2;
             return"\ufdd0:recur"
           }else {
-            if(cljs.core._EQ_.call(null, 2, G__52732)) {
-              var inst_52718 = cljs.core.async.timeout.call(null, 10);
-              var state_52725__$1 = state_52725;
-              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_52725__$1, 4, inst_52718)
+            if(cljs.core._EQ_.call(null, 2, G__53136)) {
+              var inst_53122 = cljs.core.async.timeout.call(null, 10);
+              var state_53129__$1 = state_53129;
+              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_53129__$1, 4, inst_53122)
             }else {
-              if(cljs.core._EQ_.call(null, 3, G__52732)) {
-                var inst_52723 = state_52725[2];
-                var state_52725__$1 = state_52725;
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_52725__$1, inst_52723)
+              if(cljs.core._EQ_.call(null, 3, G__53136)) {
+                var inst_53127 = state_53129[2];
+                var state_53129__$1 = state_53129;
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_53129__$1, inst_53127)
               }else {
-                if(cljs.core._EQ_.call(null, 4, G__52732)) {
-                  var inst_52720 = state_52725[2];
-                  var inst_52721 = water.core.blur.call(null, water.core.W, water.core.H, "w", "w");
-                  var state_52725__$1 = function() {
-                    var statearr_52734 = state_52725;
-                    statearr_52734[5] = inst_52721;
-                    statearr_52734[6] = inst_52720;
-                    return statearr_52734
+                if(cljs.core._EQ_.call(null, 4, G__53136)) {
+                  var inst_53124 = state_53129[2];
+                  var inst_53125 = water.core.blur.call(null, water.core.W, water.core.H, "w", "w");
+                  var state_53129__$1 = function() {
+                    var statearr_53138 = state_53129;
+                    statearr_53138[5] = inst_53124;
+                    statearr_53138[6] = inst_53125;
+                    return statearr_53138
                   }();
-                  var statearr_52735_52739 = state_52725__$1;
-                  statearr_52735_52739[2] = null;
-                  statearr_52735_52739[1] = 2;
+                  var statearr_53139_53143 = state_53129__$1;
+                  statearr_53139_53143[2] = null;
+                  statearr_53139_53143[1] = 2;
                   return"\ufdd0:recur"
                 }else {
                   if("\ufdd0:else") {
-                    throw new Error([cljs.core.str("No matching clause: "), cljs.core.str(state_52725[1] | 0)].join(""));
+                    throw new Error([cljs.core.str("No matching clause: "), cljs.core.str(state_53129[1] | 0)].join(""));
                   }else {
                     return null
                   }
@@ -24091,12 +24091,12 @@ cljs.core.async.impl.dispatch.run.call(null, function() {
         break
       }
     };
-    state_machine__4433__auto__ = function(state_52725) {
+    state_machine__4433__auto__ = function(state_53129) {
       switch(arguments.length) {
         case 0:
           return state_machine__4433__auto____0.call(this);
         case 1:
-          return state_machine__4433__auto____1.call(this, state_52725)
+          return state_machine__4433__auto____1.call(this, state_53129)
       }
       throw new Error("Invalid arity: " + arguments.length);
     };
@@ -24105,9 +24105,9 @@ cljs.core.async.impl.dispatch.run.call(null, function() {
     return state_machine__4433__auto__
   }();
   var state__4508__auto__ = function() {
-    var statearr_52736 = f__4507__auto__.call(null);
-    statearr_52736[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4506__auto___52737;
-    return statearr_52736
+    var statearr_53140 = f__4507__auto__.call(null);
+    statearr_53140[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__4506__auto___53141;
+    return statearr_53140
   }();
   return cljs.core.async.impl.ioc_helpers.run_state_machine.call(null, state__4508__auto__)
 });

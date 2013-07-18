@@ -19,5 +19,5 @@
       :id "water-adv"
       :source-paths ["src/water"]
       :compiler {
-        :output-to "main.js"
+        :output-to "main-adv.js"
         :optimizations :advanced}}]})
