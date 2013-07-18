@@ -1,6 +1,7 @@
 .lein-repl-history
 /target
 /lib
+/src
 /classes
 /checkouts
 pom.xml
